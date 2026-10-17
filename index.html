@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chairvoyant — Ask the Chairvoyant</title>
+<style>
+  :root { --ink:#102033; --soft:#3d4d61; --paper:#f4f1ea; --card:#fffcf7; --line:#d9d1c3; --brass:#9a7209; --navy:#102033; --hot:#9b2c2c; --hotbg:#f8e6e4; --warm:#8a5a12; --warmbg:#f6ead4; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family: Georgia, Palatino, serif; }
+  header { background:var(--navy); color:#f4f1ea; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 28px 18px; }
+  header .wrap { padding-top: 32px; padding-bottom: 36px; }
+  .brand { margin:0; font-size: 28px; }
+  .who { font-family: system-ui, sans-serif; font-size: 14px; line-height: 1.5; margin-top: 14px; }
+  .who a { color:#f4f1ea; }
+  h1 { margin: 18px 0 0; font-size: 44px; line-height: 1.05; font-weight: 650; letter-spacing: -0.03em; }
+  .invite { font-family: system-ui, sans-serif; font-size: 18px; line-height: 1.45; max-width: 38rem; margin: 16px 0 0; color: rgba(244,241,234,.92); }
+  .rule { height: 1px; background: #9a7209; border: 0; margin: 22px 0 0; }
+  main { font-family: system-ui, sans-serif; }
+  .lede { color: var(--soft); line-height: 1.5; max-width: 40rem; }
+  .filters { display:flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+  .filters button { border-radius: 999px; padding: 10px 14px; font-weight: 650; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+  .filters button.on { background: var(--navy); color: #f4f1ea; border-color: var(--navy); }
+  .count { color: var(--soft); font-size: 14px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; margin-top: 10px; }
+  summary { cursor: pointer; padding: 14px 16px; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  .name { font-weight: 750; font-size: 18px; }
+  .line { color: var(--soft); font-size: 14px; margin-top: 3px; }
+  .pill { float: right; font-size: 12px; font-weight: 750; border-radius: 999px; padding: 2px 8px; }
+  .HOT { background: var(--hotbg); color: var(--hot); }
+  .WARM { background: var(--warmbg); color: var(--warm); }
+  .OPEN { color: var(--soft); background: transparent; font-weight: 650; }
+  .card { padding: 0 16px 14px; font-size: 14px; line-height: 1.45; }
+  .r { display:grid; grid-template-columns: 6.5rem 1fr; gap: 8px; margin: 0 0 8px; }
+  .r b { color: var(--soft); }
+  .gold { margin-top: 6px; background: #f3e2b5; border-radius: 8px; }
+  .gold summary { font-weight: 750; }
+  .foot { text-align:center; color: var(--soft); font-size: 12px; margin: 18px 0 28px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="brand">Chairvoyant</p>
+    <hr class="rule">
+    <h1>Ask the Chairvoyant.</h1>
+    <p class="invite">The room is already being drawn. Know who owns it, who is designing it, and when the doors open — before the other salesperson drives by.</p>
+    <div class="who">The Chairman<br><a href="tel:3033491436">(303) 349-1436</a><br><a href="mailto:steve@thechairman.com">steve@thechairman.com</a></div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="lede">Coming openings are the order still in play. The past 90 and 120 days are for a place that just opened, when all you need is the owner and the designer. Further back is the same record, older.</p>
+  <div class="filters">
+    <button type="button" class="on" data-win="upcoming">Coming up</button>
+    <button type="button" data-win="d90">Past 90 days</button>
+    <button type="button" data-win="last120">Past 120 days</button>
+    <button type="button" data-win="archive">Further back</button>
+  </div>
+  <p class="count" id="count"></p>
+  <div id="list">
+    <details data-w="upcoming">
+      <summary><span class="pill HOT">HOT</span><div class="name">Holm</div><div class="line">Owner: Duncan and Allison Holmes, Josh Elson, Craig Lieberman — Paired Hospitality</div><div class="line">Designer: Not named in the opening announcements</div><div class="line">Congress Park · targeted late October 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>609 Corona St. Former Table 6. About 50 seats.</span></div><div class="r"><b>Phone</b><span>(303) 848-9777, Beckon / Major Tom</span></div><div class="r"><b>Web</b><span>paired.group</span></div><div class="r"><b>Notes</b><span>Confirm it has not opened. Denver Post, Aug. 28 and Sept. 16, 2026.</span></div><details class="gold"><summary>Dig deeper · Premium</summary><div class="card">The group already runs Beckon and Major Tom. Duncan Holmes is the chef. First Paired room outside RiNo.</div></details></div>
+    </details>
+    <details data-w="upcoming">
+      <summary><span class="pill WARM">WARM</span><div class="name">The Acadian</div><div class="line">Owner: Chef David Simpson</div><div class="line">Designer: Not published yet</div><div class="line">LoHi · buildout, date not set</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>1575 Boulder St. 4,900 sq ft. Bar, rooftop, patio.</span></div><div class="r"><b>Phone</b><span>Not public yet</span></div><div class="r"><b>Notes</b><span>Private chef-owner. WhatNow, Oct. 14, 2026.</span></div></div>
+    </details>
+    <details data-w="upcoming">
+      <summary><span class="pill HOT">HOT</span><div class="name">Pip Food + Drink</div><div class="line">Owner: Justin Cucci — Edible Beats</div><div class="line">Designer: Not named. The room uses objects he has collected.</div><div class="line">LoHi · early November 2026 target</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>2930 Umatilla St. About 2,000 sq ft. Former Sushi Ronin.</span></div><div class="r"><b>Notes</b><span>Sister to El Five. Denver Gazette, Sept. 21, 2026.</span></div></div>
+    </details>
+    <details data-w="upcoming">
+      <summary><span class="pill HOT">HOT</span><div class="name">Risica</div><div class="line">Owner: Andrea Frizzi</div><div class="line">Designer: Not named in this sample</div><div class="line">RiNo · confirm it is still unopened</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>3463 Walnut St. About 2,200 sq ft.</span></div><div class="r"><b>Social</b><span>@risica_denver · risicadenver.com</span></div><div class="r"><b>Notes</b><span>Not on Westword’s October 1 openings list. Denver Post, Sept. 16, 2026.</span></div></div>
+    </details>
+    <details data-w="upcoming">
+      <summary><span class="pill WARM">WARM</span><div class="name">El Chingon</div><div class="line">Owner: Family-owned, returning after a fire</div><div class="line">Designer: Not published yet</div><div class="line">RiNo · fall 2026 target</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>3330 Brighton Blvd, Unit 105, The Source. About 3,100 sq ft.</span></div><div class="r"><b>Notes</b><span>WhatNow, Oct. 9, 2026. Ask who signs the equipment order.</span></div></div>
+    </details>
+    <details data-w="upcoming">
+      <summary><span class="pill HOT">HOT</span><div class="name">The Henry</div><div class="line">Owner: Fox Restaurant Concepts</div><div class="line">Designer: Not named in the opening release</div><div class="line">Cherry Creek · opens December 16, 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>201 Fillmore St. The Henry is 6,973 sq ft. Hank’s bar next door is 4,039 sq ft, early 2027.</span></div><div class="r"><b>Notes</b><span>Mile High CRE, Sept. 15, 2026. Corporate spec.</span></div></div>
+    </details>
+    <details data-w="upcoming">
+      <summary><span class="pill HOT">HOT</span><div class="name">Barcelona Wine Bar, DTC</div><div class="line">Owner: Barcelona Wine Bar, second Colorado location</div><div class="line">Designer: Corporate. Firm not named locally.</div><div class="line">DTC · early 2027</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>Belleview and Ulster. 4,000 sq ft plus two 1,000 sq ft patios.</span></div><div class="r"><b>Notes</b><span>Existing Denver room is at 2900 Larimer. Denver Gazette.</span></div></div>
+    </details>
+    <details data-w="d90">
+      <summary><span class="pill OPEN">On file</span><div class="name">Rōmyō</div><div class="line">Owner: Frank and Jacqueline Bonanno</div><div class="line">Designer: Not named. Westword called the room train-inspired.</div><div class="line">LoDo · opened early September 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>1401 Larimer St. Former Ted’s Montana Grill.</span></div><div class="r"><b>Notes</b><span>Already open. This record answers who owns it. 5280, Oct. 9, 2026.</span></div></div>
+    </details>
+    <details data-w="d120">
+      <summary><span class="pill OPEN">On file</span><div class="name">Blossom by SYC</div><div class="line">Owner: Shuang “Sherry” Crossland — SYC Concepts</div><div class="line">Designer: Not named</div><div class="line">LoHi · opened July 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>1691 Central St.</span></div><div class="r"><b>Notes</b><span>Same owner as Bronze Empire and Chubby Fish. 5280.</span></div></div>
+    </details>
+    <details data-w="d120">
+      <summary><span class="pill OPEN">On file</span><div class="name">Mother Other</div><div class="line">Owner: Alexi Mandolini and Taylor Herbert</div><div class="line">Designer: Not named</div><div class="line">Design District · opened summer 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>675 S Broadway, Ste. 300</span></div><div class="r"><b>Notes</b><span>Already open. Denver Post, Oct. 7, 2026.</span></div></div>
+    </details>
+    <details data-w="d120">
+      <summary><span class="pill OPEN">On file</span><div class="name">Ciao Babe</div><div class="line">Owner: Niko Diamantopoulos</div><div class="line">Designer: A counter inside Avanti, not a standalone room</div><div class="line">LoHi · opened June 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>3200 Pecos St, Avanti</span></div><div class="r"><b>Notes</b><span>Small package. Kept so the owner is on file. 5280.</span></div></div>
+    </details>
+    <details data-w="archive">
+      <summary><span class="pill OPEN">On file</span><div class="name">Ash & Agave</div><div class="line">Owner: Sean Huggard — Shucking Good Hospitality</div><div class="line">Designer: Not named in the opening story</div><div class="line">Cherry Creek · opened April 7, 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>Cherry Creek Shopping Center. Former California Pizza Kitchen.</span></div><div class="r"><b>Notes</b><span>Not a new opening. Kept because people still ask who owns it. Denver Gazette, April 7, 2026.</span></div></div>
+    </details>
+    <details data-w="archive">
+      <summary><span class="pill OPEN">On file</span><div class="name">Milpero</div><div class="line">Owner: Johnny Curiel and Kasie Curiel</div><div class="line">Designer: Agatha Strompolos — Agatha Jane Interior Design</div><div class="line">Globeville · opened May 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>3455 Ringsby Ct, Unit 105A</span></div><div class="r"><b>Notes</b><span>The designer is named. 5280, Aug. 26, 2026.</span></div></div>
+    </details>
+    <details data-w="archive">
+      <summary><span class="pill OPEN">On file</span><div class="name">Fino</div><div class="line">Owner: Steven Waters</div><div class="line">Designer: 5280 credits the interior to Maximalist</div><div class="line">City Park · opened March 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>3015 E. Colfax Ave</span></div></div>
+    </details>
+    <details data-w="archive">
+      <summary><span class="pill OPEN">On file</span><div class="name">Dear Emilia</div><div class="line">Owner: Ty Leon, Austin Carson, and Heather Morrison</div><div class="line">Designer: Regular Architecture</div><div class="line">RiNo · opened January 2026</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>3615 Delgany St</span></div><div class="r"><b>Notes</b><span>Team behind Restaurant Olivia. 5280, Aug. 26, 2026.</span></div></div>
+    </details>
+    <details data-w="archive">
+      <summary><span class="pill OPEN">On file</span><div class="name">La Vie en Rose</div><div class="line">Owner: Nicole and Scott Mattson — also own Nocturne</div><div class="line">Designer: Not named</div><div class="line">RiNo · opened August 2025</div></summary>
+      <div class="card"><div class="r"><b>Address</b><span>1336 27th St</span></div><div class="r"><b>Notes</b><span>Older than this season. Shows the file goes back. 5280.</span></div></div>
+    </details>
+  </div>
+  <p class="foot">Chairvoyant beta. Denver sample. October 17, 2026. For Standard Restaurant Equipment.</p>
+</main>
+<script>
+  var buttons = document.querySelectorAll(".filters button");
+  function show(win) {
+    var n = 0;
+    document.querySelectorAll("#list details[data-w]").forEach(function(el) {
+      var w = el.getAttribute("data-w");
+      var on = win === "last120" ? (w === "d90" || w === "d120") : w === win;
+      el.hidden = !on;
+      if (on) n++;
+    });
+    document.getElementById("count").textContent = n + (n === 1 ? " record in this Denver sample." : " records in this Denver sample.");
+    buttons.forEach(function(b) { b.className = b.getAttribute("data-win") === win ? "on" : ""; });
+  }
+  buttons.forEach(function(b) { b.onclick = function() { show(b.getAttribute("data-win")); }; });
+  show("upcoming");
+</script>
+</body>
+</html>
